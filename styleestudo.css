@@ -1,0 +1,201 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+body{
+    background-color: rgb(28, 28, 29);
+    color: white;
+    font-size: 17px;
+}
+/* Navegador */
+    nav{
+        position: sticky;
+        top: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        align-content: flex-start;
+        padding: 10px;
+        background-color: rgba(28, 28, 29);
+        box-shadow: 1px 1px 10px  rgb(117, 117, 117);
+    }
+    .voltar{
+        font-size: 30px;
+        transition: none;
+        background-color: rgba(28, 28, 29);
+        border-radius: 0;
+        padding: 0;
+    }
+    .voltar:hover{
+        background-color: rgba(28, 28, 29);
+        padding: 0;
+    }
+    ul{
+        display: flex;
+        gap: 50px;
+        list-style-type: none;
+    }
+    a{
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+        font-size: 20px;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+        padding: 20px;
+    }
+    a:hover{
+        background-color: rgb(58, 58, 58);
+        padding: 20px;
+    }
+    #toque{
+        display: none;
+    }
+    /*  Fim Nav  */
+    
+    /*    HEADER    */
+    header{
+        background-image: url(image.jpg);
+        background-size: cover;
+        background-position: center;
+        display: block;
+        text-align: center;
+        padding: 150px;
+    }
+    #efeitobacana{
+        text-shadow: 1px 1px 10px;
+    }
+    
+/* FIM HEADER */
+/*   MAIN    */
+main{
+    display: flex;
+    flex-direction: column;
+    padding: 3em;
+    list-style-type: none;
+}
+#teclado{
+    display: block;
+    margin: 0 auto;
+    height: 15em;
+    border-radius: 15px;
+    box-shadow: 1px 1px 10px;
+    }
+/* FIM MAIN */
+/*   Footer   */
+    footer{
+        background-color: rgb(54, 54, 54);
+        padding: 50px;
+        font-size: 15px;
+    }
+    .cont{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .coluna2{
+        display: flex;
+        flex-direction: column;
+        transition: none;
+    }
+    .efeitodesativado{
+        padding: 0;
+        border-radius: 0;
+        transition: none;
+        list-style-type: none;
+    }
+    .efeitodesativado:hover{
+        background-color: rgb(54, 54, 54);
+        padding: 0;
+    }
+    .coluna3{
+        display: flex;
+        flex-direction: column;
+    }
+    .copy{
+        text-align: center;
+    }
+    .redes{
+        height: 15px;
+    }
+    /* FIM FOOTER */
+    /*  Versão mobile  */
+    @media screen and (max-width: 768px){
+        nav {
+          flex-direction: column;
+        }
+        nav .voltar {
+            width: 10%;
+        }
+        nav .voltar .Barra-menu{
+          display: block;
+          cursor: pointer;
+          position: relative;
+          width: 30px;
+          height: 30px;
+        }
+        nav .voltar .Barra-menu::before {
+            cursor: pointer;
+            position: absolute;
+            content: "menu";
+            top: 0;
+            left: 0;
+            font-size: 30px;
+        }
+        nav ul{
+          width: 0%;
+          flex-direction: column;
+          max-height: 0;
+          overflow: hidden;
+          transition: 0.5s ease-in-out;
+        }
+        nav ul {
+          width: 100%;
+          padding: 4px;
+          border-radius: 0;
+        }
+        #toque:checked ~ ul {
+          max-height: 500px;
+        }
+        #toque:checked ~ ul label::before {
+          content: "close";
+        }
+        .Barra-menu{
+            cursor: pointer;
+            width: 35px;
+            height: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+        .linha{
+            height: 4px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 3px;
+        }
+        article{
+            display: block;
+            text-align: center;
+        }
+        .div{
+            display: flex;
+            justify-content: center;
+        }
+        section{
+            text-align: center;
+        }
+        .cont{
+            display: flex;
+            justify-content: left;
+            flex-direction: column;
+        }
+        .coluna2{
+            margin-right: 37em;
+        }
+        .coluna3{
+            margin-right: 35em;
+        }
+    }
+/*   fim mobile    */

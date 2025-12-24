@@ -1,0 +1,29 @@
+.astags{
+    float: left;
+    padding: 100px;
+}
+#icone{
+    float: left;
+    height: 20em;
+}
+.textmeio{
+    margin-top: 100px;
+    border: 1px solid white;
+    padding: 15px;
+}
+.tags{
+    text-align: center;
+}
+ol{
+    list-style-type: none;
+}
+@media screen and (max-width: 768px){
+    .astags{
+        display: flex;
+        flex-direction: column;
+    }
+    ol{
+        list-style-type: none;
+    }
+    
+}

@@ -1,0 +1,26 @@
+.centros{
+    float: left;
+    padding: 100px;
+}
+#iconecss{
+    float: left;
+    height: 20em;
+}
+.text{
+    margin-top: 100px;
+    text-shadow: 1px 1px 7px;
+}
+.listacss{
+    text-align: center;
+}
+ol{
+    list-style-type: none;
+}
+@media  screen and (max-width:768px){
+    .centros{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    
+}
